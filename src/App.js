@@ -32,8 +32,8 @@ const Container = styled.div`
 
 const PriceUnitField = ({price, quantity, onPriceChange, onQuantityChange}) => (
   <PriceUnitFieldContainer>
-    <Field type="input" style={{width: '120px'}} value={price || ''} onChange={onPriceChange} />
-    <Field type="input" style={{width: '60px'}} value={quantity || ''} onChange={onQuantityChange} />
+    <Field type="number" style={{width: '120px'}} value={price || ''} onChange={onPriceChange} />
+    <Field type="number" style={{width: '60px'}} value={quantity || ''} onChange={onQuantityChange} />
   </PriceUnitFieldContainer>
 );
 
@@ -142,7 +142,7 @@ class App extends React.Component {
             }}
           />
 
-          <Field style={{width: '120px'}} type="input" value={this.state.inPercent || ''} onChange={(e) => {
+          <Field style={{width: '120px'}} type="number" value={this.state.inPercent || ''} onChange={(e) => {
             this.setState({inPercent: e.target.value});
           }}
           />
